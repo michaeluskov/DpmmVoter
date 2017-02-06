@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gulp prod
+pm2 start process.json

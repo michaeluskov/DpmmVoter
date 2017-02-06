@@ -1,0 +1,16 @@
+{
+  apps : [{
+    name: "voter",
+    script: "./bin/www",
+    watch: true,
+    cwd: "/home/ubuntu/voterapp",
+	merge_logs: true,
+	out_file: "/home/ubuntu/logs/logXXX.log",
+	error_file: "/home/ubuntu/logs/logXXX.log",
+	instances : "max",
+    exec_mode : "cluster",
+    env: {
+      "NODE_ENV": "production"
+    }
+  }]
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> base_head }}
+</head>
+<body>
+{{> bootstrap_header }}
+    <h3>За кого будешь голосовать?</h3>
+    <h4>Только учти, что голосовать можно только один раз! И переголосовать нельзя ;)</h4>
+    <form action="/vote" method="post">
+        <input type="hidden" name="group" value="">
+        <ul class="list-group vote-list-group">
+            {{# each groups}}
+                {{#ifCond this.name '==' ../user.group.name}}
+                    <li class="list-group-item vote-group-item disabled">
+                        <h4 class="list-group-item-heading">{{this.readable_name}}</h4>
+                        <div class="list-group-item-text">За свою группу голосовать нельзя</div>
+                    </li>
+                {{else}}
+                    <li class="list-group-item vote-group-item" data-groupname="{{this.name}}">
+                        <h4 class="list-group-item-heading">{{this.readable_name}}</h4>
+                        <div class="list-group-item-text">{{this.description}}</div>
+                    </li>
+                {{/ifCond}}
+            {{/each}}
+        </ul>
+        <input type="submit" class="btn btn-primary btn-lg" value="Проголосовать!">
+    </form>
+{{> bootstrap_footer }}
+</body>
+</html>

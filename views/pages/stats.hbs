@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{> base_head }}
+</head>
+<body class="statsbody">
+    <div class="site-link">
+        DPMM2016.RU
+    </div>
+    <div class="results"></div>
+    <div class="template results-template">
+        \{{each ranks}}
+            <div class="result-container">
+                <div class="result-flex-container">
+                    <div class="result">
+                        <div class="result-progress" style="width: ${percentage}%;"></div>
+                        <span class="result-group-name">${group}</span>
+                        <span class="result-group-score">${votes}</span>
+                    </div>
+                </div>
+            </div>
+        \{{/each}}
+    </div>
+</body>
+</html>

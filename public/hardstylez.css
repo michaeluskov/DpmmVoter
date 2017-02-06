@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+html {
+    height: 100%;
+}
+
+.statsbody {
+    height: 100%;
+    padding: 0;
+    background: rgb(20,20,20);
+    font-family: 'Merriweather', serif;
+}
+
+.template {
+    display: none;
+}
+
+.site-link {
+    text-align: center;
+    font-size: 10vw;
+    padding-top: 50px;
+    color: #A28497;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 40px;
+    align-items: stretch;
+}
+
+.result-container {
+    position: relative;
+    text-align: center;
+}
+
+.result-container:nth-child(1),
+.result-container:nth-child(2){
+    flex-basis: 50%;
+}
+
+.result-container:nth-child(1) .result-progress,
+.result-container:nth-child(2) .result-progress {
+    background: #e5959e;
+}
+
+.result-container:nth-child(n+3):nth-child(-n+5) {
+    flex-basis: 30%;
+}
+
+.result-container:nth-child(n+6) {
+    flex-basis: 22%;
+}
+
+.result-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.result {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    color: white;
+    background: #604f5a;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    max-height: 250px;
+}
+
+.result-group-name {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    z-index: 1;
+    font-size: 30px;
+    height: 30px;
+    margin: auto 0;
+    text-shadow: 0 0 15px black;
+}
+
+.result-group-score {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    z-index: 1;
+    font-size: 48px;
+    height: 52px;
+    margin: auto 0;
+    text-shadow: 0 0 15px black;
+}
+
+.result-progress {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #A28497;
+    border-radius: 15px 0 0 15px;
+}
+body {
+    padding-top: 70px;
+}
+
+.jumbotron p {
+    font-weight: 500;
+}
+
+.caption {
+    padding-bottom: 12px;
+}
+
+.loginbutton {
+    margin-top: 17px;
+}
+
+.matmexlogo {
+    display: inline !important;
+    padding-left: 5px;
+    width: 32px;
+    position: relative;
+    top: -2px;
+}
+
+.userpic {
+    display: inline !important;
+    padding-left: 5px;
+    width: 32px;
+    position: relative;
+    top: -2px;
+}
+
+.vote-list-group {
+    margin-top: 35px;
+    max-width: 800px;
+}
+
+.vote-group-item {
+    cursor: pointer;
+}
+

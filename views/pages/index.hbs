@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	{{> base_head }}
+</head>
+<body>
+    {{> bootstrap_header}}
+    <h2 class="caption">{{caption}}</h2>
+    <p>{{{description}}}</p>
+    {{#if show_login_button}}
+        <button class="btn btn-primary btn-lg loginbutton"
+                onclick="document.location.href='/auth/vkontakte/login'">
+            Войти через ВКонтакте
+        </button>
+    {{/if}}
+    {{> bootstrap_footer}}
+</body>
+</html>
